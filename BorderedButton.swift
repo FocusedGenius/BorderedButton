@@ -11,8 +11,8 @@ import QuartzCore
 
 class BorderedButton: UIButton {
     
-    var circleLayer: CAShapeLayer = CAShapeLayer()
-    var borderColor: UIColor = UIColor.whiteColor()
+    private var circleLayer: CAShapeLayer = CAShapeLayer()
+    private var borderColor: UIColor = UIColor.whiteColor()
 
     init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +26,7 @@ class BorderedButton: UIButton {
         setupButton()
     }
 
-    func setupButton() {
+    private func setupButton() {
         self.borderColor = self.titleLabel.textColor
         
         self.circleLayer.bounds = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)
